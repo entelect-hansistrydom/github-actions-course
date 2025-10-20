@@ -1,1 +1,1 @@
-# github-actions-course
+Repository for course
