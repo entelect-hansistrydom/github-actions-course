@@ -1,1 +1,1 @@
-Repository for course
+This is a test repo for a Udemy course
