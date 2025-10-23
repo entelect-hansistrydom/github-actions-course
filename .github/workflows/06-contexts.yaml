@@ -4,7 +4,7 @@ env:
     MY_WORKFLOW_VAR: "workflow"
     MY_OVERWRITTEN_VAR: "workflow"
 on:
-    push:
+    #push:
     workflow_dispatch:
         inputs:
             debug:
@@ -29,7 +29,7 @@ jobs:
                   echo ${{ github.run_id }}
                   echo ${{ github.run_number }}
             - name: Retrieve variable
-              run: echo "$MY_VAR"
+              run: echo "${{ vars.MY_VAR }}"
             - name: Print env variables
               env:
                   MY_OVERWRITTEN_VAR: "step"
