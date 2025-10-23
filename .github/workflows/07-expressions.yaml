@@ -21,7 +21,7 @@ jobs:
           echo "Commit SHA: ${{ github.sha }}"
           echo "Runner OS: ${{ runner.os }}"
       - name: "[debug] Print start-up data"
-        if: ${{ inputs.debug == true }} && ${{ github.ref_name }} == 'main'
+        if: ${{ inputs.debug == true && github.ref_name == 'main'}}
         run: |
           echo "I was triggered from main"
           echo "Ref: ${{ github.ref_name }} "
